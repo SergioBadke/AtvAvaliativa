@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        button {
+            font-size: 200px;
+            background-color: white;
+            border: solid, 4px;
+            border-radius: 20px;
+        }
+
+        .botoes{
+            font-size: 200px;
+            margin: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">Voltar</a>
+
+    <div class="botoes">
+        <button onclick="Soma()"> +1 </button>
+        <button onclick="Subtrai()"> -1 </button>
+        <p></p>
+    </div>
+    <script>
+        let Contador=document.querySelector('p')
+
+        var Contar = 0
+        function Soma(){
+            Contador.innerText = Contar++
+        }
+        function Subtrai(){
+            Contador.innerText = Contar--
+        }
+    </script>
+
+</body>
+
+</html>

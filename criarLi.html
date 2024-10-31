@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar IL</title>
+</head>
+
+<body>
+    <a href="index.html">Voltar</a>
+    <h1>Campeoes da Champions League</h1>
+
+    <ul>
+        <li>1956 - Real Madrid (Espanha)</li>
+        <li>1957 - Real Madrid (Espanha)</li>
+        <li>1958 - Real Madrid (Espanha)</li>
+        <li>1959 - Real Madrid (Espanha)</li>
+        <li>1960 - Real Madrid (Espanha)</li>
+        <li>1961 - Benfica (Portugal)</li>
+        <li>1962 - Benfica (Portugal)</li>
+        <li>1963 - Milan (Itália)</li>
+        <li>1964 - Internazionale (Itália)</li>
+        <li>1965 - Internazionale (Itália)</li>
+        <li>1966 - Real Madrid (Espanha)</li>
+        <li>1967 - Celtic (Escócia)</li>
+        <li>1968 - Manchester United (Inglaterra)</li>
+        <li>1969 - Milan (Itália)</li>
+        <li>1970 - Feyenoord (Holanda)</li>
+        <li>1971 - Ajax (Holanda)</li>
+        <li>1972 - Ajax (Holanda)</li>
+        <li>1973 - Ajax (Holanda)</li>
+        <li>1974 - Bayern de Munique (Alemanha)</li>
+        <li>1975 - Bayern de Munique (Alemanha)</li>
+        <li>1976 - Bayern de Munique (Alemanha)</li>
+        <li>1977 - Liverpool (Inglaterra)</li>
+        <li>1978 - Liverpool (Inglaterra)</li>
+        <li>1979 - Nottingham Forest (Inglaterra)</li>
+        <li>1980 - Nottingham Forest (Inglaterra)</li>
+        <li>1981 - Liverpool (Inglaterra)</li>
+        <li>1982 - Aston Villa (Inglaterra)</li>
+        <li>1983 - Hamburgo (Alemanha)</li>
+        <li>1984 - Liverpool (Inglaterra)</li>
+        <li>1985 - Juventus (Itália)</li>
+        <li>1986 - Steaua Bucareste (Romênia)</li>
+        <li>1987 - Porto (Portugal)</li>
+        <li>1988 - PSV Eindhoven (Holanda)</li>
+        <li>1989 - Milan (Itália)</li>
+        <li>1990 - Milan (Itália)</li>
+        <li>1991 - Estrela Vermelha (Iugoslávia)</li>
+        <li>1992 - Barcelona (Espanha)</li>
+        <li>1993 - Olympique de Marseille (França)</li>
+        <li>1994 - Milan (Itália)</li>
+        <li>1995 - Ajax (Holanda)</li>
+        <li>1996 - Juventus (Itália)</li>
+        <li>1997 - Borussia Dortmund (Alemanha)</li>
+        <li>1998 - Real Madrid (Espanha)</li>
+        <li>1999 - Manchester United (Inglaterra)</li>
+        <li>2000 - Real Madrid (Espanha)</li>
+        <li>2001 - Bayern de Munique (Alemanha)</li>
+        <li>2002 - Real Madrid (Espanha)</li>
+        <li>2003 - Milan (Itália)</li>
+        <li>2004 - Porto (Portugal)</li>
+        <li>2005 - Liverpool (Inglaterra)</li>
+        <li>2006 - Barcelona (Espanha)</li>
+        <li>2007 - Milan (Itália)</li>
+        <li>2008 - Manchester United (Inglaterra)</li>
+        <li>2009 - Barcelona (Espanha)</li>
+        <li>2010 - Internazionale (Itália)</li>
+        <li>2011 - Barcelona (Espanha)</li>
+        <li>2012 - Chelsea (Inglaterra)</li>
+        <li>2013 - Bayern de Munique (Alemanha)</li>
+        <li>2014 - Real Madrid (Espanha)</li>
+        <li>2015 - Barcelona (Espanha)</li>
+        <li>2016 - Real Madrid (Espanha)</li>
+        <li>2017 - Real Madrid (Espanha)</li>
+        <li>2018 - Real Madrid (Espanha)</li>
+        <li>2019 - Liverpool (Inglaterra)</li>
+        <li>2020 - Bayern de Munique (Alemanha)</li>
+        <li>2021 - Chelsea (Inglaterra)</li>
+        <li>2022 - Real Madrid (Espanha)</li>
+        <li>2023 - Manchester City (Inglaterra)</li>
+        <li>2024 - Real Madrid (Espanha)</li>
+    </ul>
+
+    <button>Sortear proximos campeões</button>
+
+    <script>
+
+        var Ano = 2024
+
+        const times = ["Real Madrid (Espanha)", "Manchester City (Inglaterra)", "Chelsea (Inglaterra)", "Bayern de Munique (Alemanha)", "Liverpool (Inglaterra)", "Barcelona (Espanha)", "Internazionale (Itália)", "Manchester United (Inglaterra)", "Milan (Itália)"]
+
+        const lista = document.querySelector('ul')
+        const Button = document.querySelector('button')
+
+        function sortearTime() {
+            let indice = Math.floor(Math.random() * times.length);
+            let sorteado = times[indice]
+
+            let item = document.createElement('li')
+            Ano = Ano + 1
+            item.textContent = (Ano + " - " + sorteado)
+
+            lista.appendChild(item)
+        }
+
+        Button.addEventListener('click', sortearTime)
+
+
+    </script>
+</body>
+
+</html>

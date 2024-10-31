@@ -1,0 +1,35 @@
+<!-- Não é oq parece -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Falls</title>
+</head>
+
+<body>
+    <a href="index.html">Voltar</a>
+    <img src="Tutuba.jpg" alt="">
+    <p></p>
+
+    <script>
+        let Tutuba = document.querySelector('img')
+        let texto = document.querySelector('p')
+
+        Tutuba.addEventListener(click, () => {
+            texto.textContent = ("Haha")
+        })
+        Tutuba.addEventListener(mouseleave, () => {
+            texto.textContent = ("Vlww tio")
+        })
+        Tutuba.addEventListener(mouseenter, () => {
+            texto.textContent = ("Slk pai")
+        })
+        Tutuba.addEventListener(mousemove, () => {
+            texto.textContent = ("vaza o comedia")
+        })
+    </script>
+</body>
+
+</html>
