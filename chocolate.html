@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+ 
+    </style>
+</head>
+<body>
+    <div class="corpo">
+        <a href="index.html">Voltar</a>
+
+        <input type="text" class="Chocolate">
+        <p class="AmoChoco"></p>
+    
+        <button class="Dark">Dark</button>
+    </div>
+    
+    <script>
+        const Chocolate = document.querySelector('.Chocolate');
+        const AmoChoco = document.querySelector('.AmoChoco');
+
+        const Dark = document.querySelector('.Dark')
+
+        const Corpo = document.querySelector('.corpo')
+
+        Chocolate.addEventListener('keyup', () => {
+            let Choco = Chocolate.value;
+            if (Choco == "Chocolate") {
+                AmoChoco.innerText = "Amo sorvete de chocolate";
+            }
+            if (Choco == "Flocos") {
+                AmoChoco.innerText = "Ahh, mas chocolate é o meu favorito...";
+            }
+
+            else {
+                AmoChoco.innerText = "Ahh, eu esperava um sabor de sorvete...";
+            }
+        })
+
+        Dark.addEventListener('click', () => {
+            document.body.style.background = "black"
+            document.body.style.color = "white"
+        })
+
+
+
+        butto
+    </script>
+</body>
+</html>

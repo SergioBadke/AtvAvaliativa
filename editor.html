@@ -76,11 +76,22 @@
         <li>2021 - Palmeiras (Brasil)</li>
         <li>2022 - Flamengo (Brasil)</li>
         <li>2023 - Fluminense (Brasil)</li>
+        <li>2024 - ********** (Brasil)</li>
     </ul>
+
+    <button>Corrigir H1</button>
 
     <script>
         let Titulo=document.querySelector('h1')
-        Titulo.innerText = "Campeões da Libertadores da América"
+      
+        const Botao = document.querySelector('button')
+
+        function editarH1(){
+              Titulo.innerText = "Campeões da Libertadores da América"
+        }
+        Botao.addEventListener('click', editarH1)
+
+
     </script>
 </body>
 

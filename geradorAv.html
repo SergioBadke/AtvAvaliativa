@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <a href="index.html">Voltar</a>
+
+    <div class="titulo">
+        <h1>Gerador de aventureiro</h1>
+    </div>
+
+    <div class="botao"><button>Gerar</button></div>
+    <p></p>
+
+    <script>
+        const titles =      ["Sr.",         "Mister",       "Dom",          "Lord",     "Lady",     "Capitão",      "Dama"];
+        const names =       ["Arthur",      "Gwendolyn",    "Merlin",       "Lancelot", "Morgana",  "Ragnar",       "Éowyn"];
+        const classes =     ["Mago",        "Paladino",     "Arqueiro",     "Ladino",   "Bárbaro",  "Feiticeiro",   "Cavaleiro"];
+        const locations =   ["Valfenda",    "Gondor",       "Asgard",       "Camelot",  "Nárnia",   "Babilônia",    "Atlantis"];
+
+        const Button = document.querySelector('button')
+        const Gerador = document.querySelector('p')
+
+        let Titulo = ""
+        let Nome = ""
+        let Classe = ""
+        let Local = ""
+
+        function sortearTitulo() {
+            let indice = Math.floor(Math.random() * titles.length);
+            let sorteado = titles[indice]
+
+            Titulo = sorteado
+
+        }
+
+        function sortearNome() {
+            let indice = Math.floor(Math.random() * names.length);
+            let sorteado = names[indice]
+
+            Nome = sorteado
+
+        }
+
+        function sortearClasse() {
+            let indice = Math.floor(Math.random() * classes.length);
+            let sorteado = classes[indice]
+
+            Classe = sorteado
+
+        }
+
+        function sortearLocal() {
+            let indice = Math.floor(Math.random() * locations.length);
+            let sorteado = locations[indice]
+
+            Local = sorteado
+
+        }
+
+        function Gerar() {
+            sortearTitulo()
+            sortearNome()
+            sortearClasse()
+            sortearLocal()
+
+            Gerador.innerText = (Titulo + " " + Nome + ", o " + Classe + " de " + Local)
+        }
+
+        Button.addEventListener('click', Gerar)
+
+
+    </script>
+</body>
+
+</html>
